@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - ExaMPS</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f5f5dc; /* Dirty white */
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: yellowgreen; /* Changed to yellowgreen */
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 97.5%;
+            top: 0; 
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 40px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ddd;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: yellowgreen; /* Updated */
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            text-align: center;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .section p {
+            font-size: 17px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .our-story {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .our-story h2 {
+            color: yellowgreen; /* Updated */
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .our-story p {
+            font-size: 17px;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .expandable-container {
+            overflow: hidden;
+            transition: max-height 0.8s ease-out;
+            max-height: 5px; 
+        }
+
+        .expandable-content {
+            display: block;
+            font-size: 19px;
+            line-height: 1.6;
+        }
+
+        .expandable-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 17px;
+            color: yellowgreen; /* Updated */
+            background-color: #fff;
+            border: 2px solid yellowgreen; /* Updated */
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            margin: 20px 0;
+            transition: transform 0.5s ease;
+        }
+
+        .expandable-button:hover {
+            background-color: yellowgreen; /* Updated */
+            color: #fff;
+        }
+
+        .expanded {
+            max-height: 500px; 
+        }
+
+        .team-section-wrapper {
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+        .team-section {
+            display: flex;
+            white-space: nowrap;
+            padding-bottom: 20px;
+            animation: slide 200s linear infinite;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-5600px);
+            }
+        }
+
+        .team-section .member {
+            flex: 0 0 auto;
+            background: #f0e8e6;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 220px;
+            display: block;
+        }
+
+        .team-section img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-section h3 {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .team-section p {
+            color: #555;
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: yellowgreen; /* Updated */
+            color: white;
+        }
+
+        .footercontent .changelogsbtn {
+            text-decoration: none;
+            color: lightgreen;
+        }
+
+        @media (max-width: 768px) {
+
+            header {
+                background-color: yellowgreen; /* Updated */
+                color: white;
+                padding: 15px 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                position: fixed;
+                width: 89%;
+                top: 0; 
+                z-index: 1000;
+            }
+
+            header h1 {
+                margin: 0;
+                font-size: 24px;
+            }
+
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+
+            nav ul li {
+                margin-left: 10px;
+            }
+
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+                font-size: 12px;
+            }
+
+            h2 {
+                color: yellowgreen; /* Updated */
+                font-size: 30px;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .section p {
+                font-size: 15px;
+                max-width: 900px;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            .our-story h2 {
+                color: yellowgreen; /* Updated */
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+
+            .our-story p {
+                font-size: 15px;
+                line-height: 1.6;
+            }
+
+        }
+    </style>
+</head>
+<body>
+
+<!-- ✅ FIXED HEADER -->
+<header>
+    <h1>ExaMPS 2.0</h1>
+    <nav>
+        <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ✅ CONTENT -->
+<div class="content">
+    <h2>About ExaMPS 2.0</h2>
+    <div class="section">
+        <p>
+            ExaMPS 2.0 is the new and improved version of the original ExaMPS project.
+            The first version made last year was not finished, so it wasn’t very useful for the school.
+            Our group decided to continue the work and make it better so that teachers and students can really use it.
+        </p>
+        <br>
+        <p>
+            This new version has a better design, runs faster, and is easier to use.
+            It helps teachers create exams, check scores, and record the Mean Percentage Score (MPS) in a simpler and quicker way.
+        </p>
+    </div>
+
+    <div class="our-story">
+        <h2>Our Story</h2>
+        <p>
+            ExaMPS 2.0 was re-developed by Grade 12 – Buoyant, Group 5 for the School Year 2025–2026,
+            under the guidance of Mrs. Janette G. De Ramos at Famy National Integrated High School.
+            Our goal was to finish what was started last year and turn it into a complete system that the school can really use.
+        </p>
+        <div class="expandable-container" id="expandable-container">
+            <p class="expandable-content">
+                Last year’s system didn’t have all the needed parts and wasn’t ready for actual use.
+                So, our team worked hard to make it complete and useful for teachers and students.
+                This new version is more secure, faster, and now works on both computers and mobile devices.
+                With ExaMPS 2.0, teachers can handle exams easily, and students can take tests smoothly.
+            </p>
+       </div>
+<button class="expandable-button" onclick="toggleContent()">Read More</button>
+</div>
+
+<h2>Meet the Team</h2>
+<div class="team-section">
+    <div class="member">
+        <img src="examps2_db/lean.jpg" alt="Lean Marie M. Garcia" width="150">
+        <h3>Lean Marie M. Garcia</h3>
+        <p>Project Leader</p>
+    </div>
+    <div class="member">
+        <img src="examps2_db/shaine.jpg" alt="Shaine Wynstleth M. Sin" width="150">
+        <h3>Shaine Wynstleth M. Sin</h3>
+        <p>Project Co-Leader</p>
+    </div>
+    <div class="member">
+        <img src="examps2_db/d mabuti.jpg" alt="Jenna D. Mabuti" width="150">
+        <h3>Jenna D. Mabuti</h3>
+        <p>Project Secretary</p>
+    </div>
+    <div class="member">
+        <img src="examps2_db/cristopher.jpg" alt="Cristopher B. Ramis" width="150">
+        <h3>Cristopher B. Ramis</h3>
+        <p>Member</p>
+    </div>
+    <div class="member">
+        <img src="examps2_db/alfhie.jpg" alt="Alfhie R. Foncardas" width="150">
+        <h3>Alfhie R. Foncardas</h3>
+        <p>Member</p>
+    </div>
+    <div class="member">
+        <img src="examps2_db/angelica.jpg" alt="Angelica I. Lopez" width="150">
+        <h3>Angelica I. Lopez</h3>
+        <p>Member</p>
+    </div>
+</div>
+
+
+<!-- ✅ FOOTER -->
+<footer>
+    <div class="footercontent">
+        <p>&copy; ExaMPS 2.0. All rights reserved. <a href="changelogs.html" class="changelogsbtn">View Changelogs</a></p>
+    </div>
+</footer>
+
+<script>
+function toggleContent() {
+    var container = document.getElementById("expandable-container");
+    var button = document.querySelector(".expandable-button");
+
+    if (container.classList.contains("expanded")) {
+        container.classList.remove("expanded");
+        button.textContent = "Read More";
+    } else {
+        container.classList.add("expanded");
+        button.textContent = "Read Less";
+    }
+}
+</script>
+
+</body>
+</html>

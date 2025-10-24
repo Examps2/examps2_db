@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - ExaMPS 2.0</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f5f5dc; /* Dirty white */
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: yellowgreen; /* Updated */
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 97.5%; /* Same as About Us */
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 40px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact Container */
+        .contact-container {
+            max-width: 1200px; /* Match About Us width */
+            margin: 120px auto 50px; /* Added top space for header */
+            padding: 20px;
+            background-color: #ddd;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border: 3px solid yellowgreen;
+            text-align: center;
+        }
+
+        h2 {
+            color: yellowgreen;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            font-size: 17px;
+            line-height: 1.6;
+            margin: 10px auto;
+            max-width: 900px; /* Consistent with About Us text width */
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: yellowgreen;
+            color: white;
+            margin-top: auto;
+        }
+
+        .footercontent .changelogsbtn {
+            text-decoration: none;
+            color: lightgreen;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                width: 89%; /* Same as About Us responsive */
+            }
+
+            nav ul li {
+                margin-left: 15px;
+            }
+
+            nav ul li a {
+                font-size: 14px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            .contact-info p {
+                font-size: 16px;
+            }
+
+            .contact-container {
+                width: 90%;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+<!-- ✅ FIXED HEADER -->
+<header>
+    <h1>ExaMPS 2.0</h1>
+    <nav>
+        <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ✅ CONTACT CONTENT -->
+<div class="contact-container">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+        <p>Email: examps2.0@gmail.com</p>
+        <p>Phone: +63 907-216-8051</p>
+        <p>Address: Famy National Integrated High School, Laguna</p>
+    </div>
+</div>
+
+<!-- ✅ FOOTER -->
+<footer>
+    <div class="footercontent">
+        <p>&copy; ExaMPS 2.0. All rights reserved. <a href="changelogs.html" class="changelogsbtn">View Changelogs</a></p>
+    </div>
+</footer>
+
+</body>
+</html>
